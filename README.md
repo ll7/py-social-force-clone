@@ -21,3 +21,7 @@ pip install -r requirements.txt
 
 pip freeze > requirements.txt
 ```
+
+## pygame
+
+<https://www.pygame.org/>
