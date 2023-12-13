@@ -50,6 +50,7 @@ class Simulator:
                 obj.update(self.dt)
                 obj.draw(self.screen)
 
+            # flip() the display to put your work on screen
             pygame.display.flip()
             self.dt = self.clock.tick(60) / 1000
             self.time += self.dt
