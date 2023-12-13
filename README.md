@@ -10,6 +10,8 @@ Attempt to reimplement PySocialForce
 ## virtualenv
 
 ```bash
+pip install virtualenv
+
 virtualenv .venv
 
 # Ubuntu
