@@ -23,7 +23,8 @@ class Simulator:
         self.objects = []
         pygame.init()
         self.screen = pygame.display.set_mode((width, height))
-        self.screen.fill("purple")
+        self.background_color = "blue"
+        self.screen.fill(self.background_color)
         self.clock = pygame.time.Clock()
         self.running = True
         self.time = 0
@@ -43,7 +44,7 @@ class Simulator:
                 if event.type == pygame.QUIT:
                     self.running = False
 
-            self.screen.fill("purple")
+            self.screen.fill(self.background_color)
 
             for obj in self.objects:
                 obj.update(self.dt)
@@ -64,7 +65,7 @@ class wasd_circle:
             self, 
             pos, 
             radius=40, 
-            color="red", 
+            color="orange", 
             speed=300
             ):
         """
