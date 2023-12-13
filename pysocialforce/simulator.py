@@ -50,6 +50,13 @@ class Simulator:
                 obj.update(self.dt)
                 obj.draw(self.screen)
 
+                # create a text message on the screen to display the current object position
+                obj_position_font = pygame.font.Font(None, 16)   # default font, size 36 pt  
+                text = obj_position_font.render(f"{obj.pos}", True, "white")
+                text_rect = text.get_rect()
+                text_rect.center = obj.pos
+                self.screen.blit(text, text_rect)
+
             # create a text message on the screen to display the current time
             time_font = pygame.font.Font(None, 16)   # default font, size 36 pt
             time_text = time_font.render(f"{self.time}", True, "white")
