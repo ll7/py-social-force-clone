@@ -50,6 +50,13 @@ class Simulator:
                 obj.update(self.dt)
                 obj.draw(self.screen)
 
+            # create a text message on the screen to display the current time
+            time_font = pygame.font.Font(None, 16)   # default font, size 36 pt
+            time_text = time_font.render(f"{self.time}", True, "white")
+            time_text_rect = time_text.get_rect()
+            time_text_rect.center = (self.width / 2, 20)
+            self.screen.blit(time_text, time_text_rect)
+            
             # flip() the display to put your work on screen
             pygame.display.flip()
             self.dt = self.clock.tick(60) / 1000
